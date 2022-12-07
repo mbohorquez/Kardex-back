@@ -1,0 +1,1092 @@
+{
+	"info": {
+		"_postman_id": "383bf5ce-a63d-44c9-a1c3-0954383506b7",
+		"name": "Kardex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9552046"
+	},
+	"item": [
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Inserta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{                \r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Productos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/Productos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{                \r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/Productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"Productos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 22:40:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Producto 000\",\n        \"minimo\": 0,\n        \"maximo\": 0,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Producto 001\",\n        \"minimo\": 1,\n        \"maximo\": 1,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Producto 002\",\n        \"minimo\": 2,\n        \"maximo\": 2,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Actualiza",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{        \r\n        \"id\":1,\r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Productos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/Productos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{                \r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/Productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"Productos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 22:40:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Producto 000\",\n        \"minimo\": 0,\n        \"maximo\": 0,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Producto 001\",\n        \"minimo\": 1,\n        \"maximo\": 1,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Producto 002\",\n        \"minimo\": 2,\n        \"maximo\": 2,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Obtener Todo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{                \r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Productos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/Productos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{                \r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/Productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"Productos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 22:40:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Producto 000\",\n        \"minimo\": 0,\n        \"maximo\": 0,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Producto 001\",\n        \"minimo\": 1,\n        \"maximo\": 1,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Producto 002\",\n        \"minimo\": 2,\n        \"maximo\": 2,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Obtener por ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{                \r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Productos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Productos",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/Productos",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{                \r\n        \"nombre\": \"Producto 000\",\r\n        \"minimo\": 0,\r\n        \"maximo\": 0,\r\n        \"estado\": 1,\r\n        \"cantidad\": 0,\r\n        \"valor\": 0\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/Productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"Productos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 22:40:42 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Producto 000\",\n        \"minimo\": 0,\n        \"maximo\": 0,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Producto 001\",\n        \"minimo\": 1,\n        \"maximo\": 1,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Producto 002\",\n        \"minimo\": 2,\n        \"maximo\": 2,\n        \"estado\": 1,\n        \"cantidad\": 0,\n        \"valor\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Inserta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"codigoFactura\":\"2020dic06\",\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 20,\r\n            \"valorTotal\":240000\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Todo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"codigoFactura\":\"2020dic06\",\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 25\r\n        },\r\n        {\r\n            \"idProducto\": 2,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"idProducto\": 3,        \r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Detalle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"codigoFactura\":\"2020dic06\",\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 25\r\n        },\r\n        {\r\n            \"idProducto\": 2,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"idProducto\": 3,        \r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/PedidoDet/IdPedido/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"PedidoDet",
+								"IdPedido",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Detalle del item",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"codigoFactura\":\"2020dic06\",\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 25\r\n        },\r\n        {\r\n            \"idProducto\": 2,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"idProducto\": 3,        \r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/PedidoDet/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"PedidoDet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturas",
+			"item": [
+				{
+					"name": "Inserta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"idUsuario\":1,\r\n    \"idMedioDePago\":1,\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 25\r\n        },\r\n        {\r\n            \"idProducto\": 2,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"idProducto\": 3,        \r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Facturas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Facturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Todo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"idUsuario\":1,\r\n    \"idMedioDePago\":1,\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 25\r\n        },\r\n        {\r\n            \"idProducto\": 2,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"idProducto\": 3,        \r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Facturas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Facturas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Detalle ",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"idUsuario\":1,\r\n    \"idMedioDePago\":1,\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 25\r\n        },\r\n        {\r\n            \"idProducto\": 2,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"idProducto\": 3,        \r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/FacturaDet/IdFactura/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"FacturaDet",
+								"IdFactura",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Detalle del item",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"idUsuario\":1,\r\n    \"idMedioDePago\":1,\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 25\r\n        },\r\n        {\r\n            \"idProducto\": 2,\r\n            \"cantidad\": 2\r\n        },\r\n        {\r\n            \"idProducto\": 3,        \r\n            \"cantidad\": 1\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/FacturaDet/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"FacturaDet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Inserta",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"nombre\": \"MIGUEL BOHORQUEZ\",\r\n    \"usuario\": \"admin\",\r\n    \"password\": \"$2a$10$mKVKyp9j6fjRoe1D3rP.K.spnguKiBHTBqURJUULbI35qxyCa19cO\",\r\n    \"tarjetaCredito\": \"323223223232323\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualiza",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"MIGUEL BOHORQUEZ\",\r\n    \"usuario\": \"admin\",\r\n    \"password\": \"$2a$10$mKVKyp9j6fjRoe1D3rP.K.spnguKiBHTBqURJUULbI35qxyCa19cO\",\r\n    \"tarjetaCredito\": \"323223223232323\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener todo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"MIGUEL BOHORQUEZ\",\r\n    \"usuario\": \"admin\",\r\n    \"password\": \"$2a$10$mKVKyp9j6fjRoe1D3rP.K.spnguKiBHTBqURJUULbI35qxyCa19cO\",\r\n    \"tarjetaCredito\": \"323223223232323\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener por id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"MIGUEL BOHORQUEZ\",\r\n    \"usuario\": \"admin\",\r\n    \"password\": \"$2a$10$mKVKyp9j6fjRoe1D3rP.K.spnguKiBHTBqURJUULbI35qxyCa19cO\",\r\n    \"tarjetaCredito\": \"323223223232323\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kardex",
+			"item": [
+				{
+					"name": "Obtener Todo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY3MjkzNzQ1Nywibm9tYnJlIjoiTUlHVUVMIEJPSE9SUVVFWiJ9.lFw-Ic0GIB_hjfC4ZLSeomSJx8FuQ3nkwH_kNW58Tf4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"codigoFactura\":\"2020dic07\",\r\n    \"listaProductos\":[\r\n        {\r\n            \"idProducto\": 1,\r\n            \"cantidad\": 10,\r\n            \"valorTotal\":150000\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Kardex",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Kardex"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
