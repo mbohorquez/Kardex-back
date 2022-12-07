@@ -1,0 +1,20 @@
+package com.example.kardex.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.kardex.modelo.Pedido;
+
+@Service
+public class PedidoService implements IPedido {
+	IPedido
+	@Autowired
+	private Ipe service;
+	
+	@Override
+	public int agregar(Pedido p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

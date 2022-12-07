@@ -1,0 +1,27 @@
+package com.example.kardex.modeloDAO;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.example.kardex.modelo.Factura;
+
+@Repository
+public class VentaDAO implements IVenta{
+	private int id;
+	private int valor;
+	private int medioDePago;
+	private int idUsuario;
+	private Date fecha;
+	@Autowired
+	private JdbcTemplate template;
+	@Override
+	public int agregar(Factura f) {
+		String sql = "insert into factura(codigoFactura,idproducto,cantidad,valor,fecha) values(?,?,?,?,?)";
+		int resp = template.update(sql,f.getValor(),f.getMedioDePago(),f.getIdUsuario(),f.getFecha());
+		return resp;
+	}
+
+}

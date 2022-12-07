@@ -1,0 +1,43 @@
+package com.example.kardex.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.kardex.modelo.Producto;
+import com.example.kardex.modeloDAO.IProducto;
+
+@Service
+public class ProductoService implements IProductoService{
+	
+    @Autowired
+	private IProducto dao;
+	@Override
+	public List<Producto> listar() {
+		return dao.listar();
+	}
+
+	@Override
+	public Producto listProductoId(int id) {
+		return dao.listProductoId(id);
+	}
+
+	@Override
+	public int agregar(Producto p) {
+		return dao.agregar(p);
+	}
+
+	@Override
+	public int editar(Producto p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

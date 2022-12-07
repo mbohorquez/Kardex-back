@@ -1,0 +1,13 @@
+package com.example.kardex.service;
+
+import com.example.kardex.modelo.Pedido;
+
+public class PedidoService implements IPedidoService {
+
+	@Override
+	public int agregar(Pedido p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

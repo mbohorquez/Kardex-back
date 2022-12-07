@@ -1,0 +1,18 @@
+package com.example.kardex.configuration;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+public class TokenUtils {
+	private final static String ACCESS_TOKEN_SECRET = "caa5cc97b8bb592b0410503ece70458126f834d5";
+	private final static Long ACCESS_TOKEN_VALIDITY_SECONDS = 2_592_000L;
+	
+	public static String createToken(String nombre, String email) {
+		long expirationTime = ACCESS_TOKEN_VALIDITY_SECONDS * 1000;
+		Date expirationDate = new Date(System.currentTimeMillis() + expirationTime);
+		
+		Map<String, Object> Extra = HashMap<>();
+		
+	} 
+}

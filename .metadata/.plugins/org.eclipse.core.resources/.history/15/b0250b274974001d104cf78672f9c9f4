@@ -1,0 +1,7 @@
+package com.example.kardex.service;
+
+import com.example.kardex.controller.UsuarioController;
+
+public interface IUsuarioService {
+	public int resgistrar(UsuarioController u);
+}

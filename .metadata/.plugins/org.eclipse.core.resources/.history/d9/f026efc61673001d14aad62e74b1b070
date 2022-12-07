@@ -1,0 +1,41 @@
+package com.example.kardex.modelo;
+
+public class producto {
+	private int id;
+	private String nombre;
+	private int unidad;
+	private int minimo;
+	private int maximo;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public int getUnidad() {
+		return unidad;
+	}
+	public void setUnidad(int unidad) {
+		this.unidad = unidad;
+	}
+	public int getMinimo() {
+		return minimo;
+	}
+	public void setMinimo(int minimo) {
+		this.minimo = minimo;
+	}
+	public int getMaximo() {
+		return maximo;
+	}
+	public void setMaximo(int maximo) {
+		this.maximo = maximo;
+	}
+	
+}

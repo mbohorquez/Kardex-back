@@ -1,0 +1,8 @@
+package com.example.kardex.modelo;
+
+public class Pedido {
+	private int id;
+	private int codigoFactura;
+	private int cantidad;
+	private int valor;
+}

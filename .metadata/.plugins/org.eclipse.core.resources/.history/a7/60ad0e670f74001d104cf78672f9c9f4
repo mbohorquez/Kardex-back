@@ -1,0 +1,21 @@
+package com.example.kardex.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.kardex.modelo.Factura;
+import com.example.kardex.modeloDAO.IVenta;
+
+@Service
+public class VentaService implements IVentaService {
+
+	@Autowired
+	private IVenta dao;
+	@Override
+	public int agregar(Factura f) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	 
+
+}

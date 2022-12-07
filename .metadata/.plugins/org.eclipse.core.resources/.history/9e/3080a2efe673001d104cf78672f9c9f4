@@ -1,0 +1,13 @@
+package com.example.kardex.modeloDAO;
+
+import java.util.List;
+
+import com.example.kardex.modelo.Producto;
+
+public interface IProducto {
+public List<Producto>listar();
+public Producto listProductoId(int id);
+public int agregar(Producto p);
+public int editar(Producto p);
+public void delete(int id);
+}

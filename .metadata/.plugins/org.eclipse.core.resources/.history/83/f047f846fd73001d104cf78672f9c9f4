@@ -1,0 +1,16 @@
+package com.example.kardex.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.kardex.modelo.Pedido;
+
+@Service
+public class PedidoService implements IPedidoService {
+
+	@Override
+	public int agregar(Pedido p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

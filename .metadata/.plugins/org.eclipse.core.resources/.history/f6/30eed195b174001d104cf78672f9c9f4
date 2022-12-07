@@ -1,0 +1,48 @@
+package com.example.kardex.configuration;
+
+import javax.sql.DataSource;
+
+import org.apache.catalina.User;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfiguration  {
+
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() {
+        return (web) -> web.ignoring().requestMatchers("/registrarUsuario");
+    }
+    @Bean
+    public UserDetailsManager userDetailsManager() {
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(org.springframework.security.core.userdetails.User.withUsername("admin")
+        		.password(passwordEncoder().encode("admin"))
+        		.roles()
+        		.roles());
+        return manager;
+        		
+    }
+    
+   
+        
+    PasswordEncoder passwordEncoder() {
+    	return new BCryptPasswordEncoder();
+    }
+        
+    
+    
+    
+
+}

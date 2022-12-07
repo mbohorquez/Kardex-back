@@ -1,0 +1,22 @@
+package com.example.kardex.modeloDAO;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.example.kardex.modelo.Usuario;
+
+@Repository
+public class UsuarioDAO implements IUsuario{
+	
+	@Autowired
+	private JdbcTemplate template;
+	
+	@Override
+	public int registrar(Usuario u) {
+		String sql = "insert into usuario(nombre,usuario,password,tarjetacredito) values(?,?,?,?)";
+		int resp = template.update(sql,u.getNombre(),u.getUsuario(),u.getPassword(),u.getTarjetaCredito());
+		return resp;
+	}
+
+}

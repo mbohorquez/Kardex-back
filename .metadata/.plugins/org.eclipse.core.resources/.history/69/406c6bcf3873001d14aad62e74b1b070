@@ -1,0 +1,21 @@
+package com.example.kardex.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.kardex.modelo.Producto;
+import com.example.kardex.service.IProductoService;
+
+@Controller
+public class ProductoController {
+	
+	private IProductoService service;
+	
+	@GetMapping("/listar")
+	public List<Producto> listar() {		
+		List<Producto> producto = service.listar();
+		return producto;
+	}
+}

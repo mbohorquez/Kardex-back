@@ -1,0 +1,27 @@
+package com.example.kardex.configuration;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.example.kardex.modelo.Usuario;
+import com.example.kardex.modeloDAO.IUsuario;
+
+@Service
+public class UserDetailServiceImpl implements UserDetailsService{
+	
+	@Autowired
+	private IUsuario dao;
+	
+	@Override
+	public UserDetails loadUserByUsername(String usuario) throws UsernameNotFoundException {
+		Usuario user = dao.findUsuario(usuario);
+		if (user == null) {
+			return (UserDetails) new UsernameNotFoundException("El usuario "+ usuario +" no existe");
+		}
+		
+		return null;
+	}
+}

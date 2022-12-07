@@ -1,0 +1,15 @@
+package com.example.kardex.service;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+
+import com.example.kardex.modelo.Producto;
+
+public interface IProductoService {
+	public List<Producto>listar();
+	public Producto listProductoId(int id);
+	public Producto agregar(Producto p);
+	public int editar(Producto p);
+	public void delete(int id);
+}

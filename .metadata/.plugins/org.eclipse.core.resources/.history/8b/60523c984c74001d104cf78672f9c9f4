@@ -1,0 +1,34 @@
+package com.example.kardex.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.example.kardex.modelo.Usuario;
+import com.example.kardex.modeloDAO.IUsuario;
+
+@Service
+public class UsuarioService implements IUsuarioService{
+	
+	@Autowired
+	private IUsuario dao;
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
+	public UsuarioService(IUsuario usuario) {
+		this.dao = usuario;
+		this.passwordEncoder = new BCryptPasswordEncoder();
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public int resgistrar(Usuario u) {
+		String password = this.passwordEncoder.encode(u.getPassword());
+		String tarjetaCredito = this.passwordEncoder.encode(u.getTarjetaCredito());
+		u.setPassword(password);
+		u.setTarjetaCredito(tarjetaCredito);
+		return dao.registrar(u);
+	}
+
+}

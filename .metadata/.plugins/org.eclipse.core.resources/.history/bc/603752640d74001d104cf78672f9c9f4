@@ -1,0 +1,9 @@
+package com.example.kardex.service;
+
+import com.example.kardex.modelo.Factura;
+
+public interface IVentaService {
+	public interface IVenta {
+		public int agregar(Factura f);
+	}
+}

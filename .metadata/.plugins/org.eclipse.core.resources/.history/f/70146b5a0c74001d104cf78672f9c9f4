@@ -1,0 +1,12 @@
+package com.example.kardex.modelo;
+
+import java.util.Date;
+
+public class Factura {
+	private int id;
+	private int valor;
+	private int medioDePago;
+	private int idUsuario;
+	private Date fecha;
+	
+}

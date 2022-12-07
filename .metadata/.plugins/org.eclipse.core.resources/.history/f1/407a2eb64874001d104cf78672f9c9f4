@@ -1,0 +1,16 @@
+package com.example.kardex.modeloDAO;
+
+import org.springframework.stereotype.Repository;
+
+import com.example.kardex.controller.Usuario;
+
+@Repository
+public class UsuarioDAO implements IUsuario{
+
+	@Override
+	public int registrar(Usuario u) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

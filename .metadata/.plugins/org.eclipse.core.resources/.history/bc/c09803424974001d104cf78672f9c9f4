@@ -1,0 +1,7 @@
+package com.example.kardex.modeloDAO;
+
+import com.example.kardex.controller.UsuarioController;
+
+public interface IUsuario {
+	public int registrar(UsuarioController u);
+}

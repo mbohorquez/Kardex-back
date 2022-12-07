@@ -1,0 +1,48 @@
+package com.example.kardex;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+@SpringBootApplication
+public class DemoApplication implements CommandLineRunner{
+	
+	@Autowired
+	private JdbcTemplate template;
+
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+	
+	
+	@Override
+	public void run(String... args) throws Exception {
+		template.execute("DROP TABLE PRODUCTO IF EXISTS");
+		template.execute("CREATE TABLE PRODUCTO(ID INT PRIMARY KEY AUTO_INCREMENT, NOMBRE VARCHAR(255) NOT NULL, MINIMO INT NOT NULL,"
+						+ " MAXIMO INT NOT NULL, ESTADO INT NOT NULL DEFAULT 1)");
+		
+		template.execute("CREATE TABLE PEDIDO(ID INT PRIMARY KEY AUTO_INCREMENT, IDPRODUCTO INT NOT NULL,FOREIGN KEY (IDPRODUCTO ) REFERENCES PRODUCTO(ID),CODIGOFACTURA VARCHAR(255) NOT NULL,"
+						+ " CANTIDAD INT NOT NULL, VALOR INT NOT NULL, FECHA DATE NOT NULL)");
+		
+		template.execute("CREATE TABLE USUARIO(ID INT PRIMARY KEY AUTO_INCREMENT, NOMBRE VARCHAR(255) NOT NULL, USUARIO  VARCHAR(255) NOT NULL, PASSWORD VARCHAR(255) NOT NULL, TARJETACREDITO INT NOT NULL)");
+		
+		template.execute("CREATE TABLE MEDIODEPAGO(ID INT PRIMARY KEY AUTO_INCREMENT, MEDIO VARCHAR(255) NOT NULL)");
+		template.update("insert into MEDIODEPAGO(MEDIO) values('EFECTIVO')");
+		template.update("insert into MEDIODEPAGO(MEDIO) values('TARJETA DE CREDITO')");
+		
+		template.execute("CREATE TABLE FACTURA(ID INT PRIMARY KEY AUTO_INCREMENT, VALOR INT NOT NULL, IDMEDIODEPAGO  INT NOT NULL, FOREIGN KEY (IDMEDIODEPAGO ) REFERENCES MEDIODEPAGO(ID),"
+						+ " CONTRASENA VARCHAR(255) NOT NULL, FECHA DATE NOT NULL, CANTIDAD INT NOT NULL )");
+		
+		for (int i = 0; i < 3; i++) {
+			template.update("insert into PRODUCTO(NOMBRE,MINIMO,MAXIMO) values('Producto 00"+ i +"',"+ i +","+ i +")");
+		}
+		
+			
+		
+	}
+
+}

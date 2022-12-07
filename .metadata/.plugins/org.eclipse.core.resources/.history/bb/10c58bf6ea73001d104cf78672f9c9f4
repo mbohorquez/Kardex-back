@@ -1,0 +1,31 @@
+package com.example.kardex.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.kardex.modelo.Producto;
+import com.example.kardex.service.IProductoService;
+
+@RestController
+public class ProductoController {
+	@Autowired
+	private IProductoService service;
+	
+	@GetMapping("/listarProductos")
+	public List<Producto> listar() {		
+		List<Producto> producto = service.listar();
+		return producto;
+	}
+	@PostMapping("/nuevoProducto")
+	public ResponseEntity<Producto> agregar(@RequestBody Producto producto) {		
+		Producto resp = service.agregar(producto);
+		return new ResponseEntity<Producto>(resp,HttpStatus.OK);
+	}
+}
